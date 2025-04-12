@@ -1,0 +1,263 @@
+body {
+    background-image: url("bg.jpg");
+    background-repeat: repeat;
+}
+
+body,
+div {
+    margin: 0 auto;
+    text-align: center;
+    background-color: #222222;
+}
+
+div.play-area {
+    width: 100vw;
+    height: 1000vh;
+    position: absolute;
+    top: 50%;
+    background-color: transparent;
+}
+
+div.target {
+    margin: 0;
+    padding: 2px;
+    display: inline-block;
+    font-size: 12em;
+    position: absolute;
+    -webkit-user-select: none;
+    user-select: none;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+}
+
+div.announcement {
+    padding: 12px;
+    display: block;
+    border: 8px solid #EEEEEE;
+    border-radius: 20px;
+    background-color: 111111;
+    color: #EEEEEE;
+    font-size: 6em;
+    -webkit-user-select: none;
+    user-select: none;
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+div.container {
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+}
+
+div.instructions {
+    margin: 12px;
+    display: block;
+    color: #EEEEEE;
+    font-size: 3em;
+    text-transform: uppercase;
+    background-color: transparent;
+    -webkit-user-select: none;
+    user-select: none;
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.zapper {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    -webkit-user-select: none;
+    user-select: none;
+    animation: flicker 0.2s infinite;
+}
+
+@keyframes flicker {
+
+    0%,
+    19%,
+    22%,
+    25%,
+    28%,
+    31%,
+    34%,
+    37%,
+    40%,
+    43%,
+    46%,
+    49%,
+    52%,
+    55%,
+    58%,
+    61%,
+    64%,
+    67%,
+    70%,
+    73%,
+    76%,
+    79%,
+    82%,
+    85%,
+    88%,
+    91%,
+    94%,
+    97%,
+    100% {
+        opacity: 0.99;
+    }
+
+    20%,
+    21%,
+    23%,
+    24%,
+    26%,
+    27%,
+    29%,
+    30%,
+    32%,
+    33%,
+    35%,
+    36%,
+    38%,
+    39%,
+    41%,
+    42%,
+    44%,
+    45%,
+    47%,
+    48%,
+    50%,
+    51%,
+    53%,
+    54%,
+    56%,
+    57%,
+    59%,
+    60%,
+    62%,
+    63%,
+    65%,
+    66%,
+    68%,
+    69%,
+    71%,
+    72%,
+    74%,
+    75%,
+    77%,
+    78%,
+    80%,
+    81%,
+    83%,
+    84%,
+    86%,
+    87%,
+    89%,
+    90%,
+    92%,
+    93%,
+    95%,
+    96%,
+    98%,
+    99% {
+        opacity: 0.01;
+    }
+}
+
+.reticle {
+    width: 200px;
+    height: 200px;
+    border: 6px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    background-color: transparent;
+}
+
+.vibrating {
+    animation: vibrate 0.3s infinite ease-in-out;
+    background-color: transparent;
+}
+
+.zapping {
+    animation: zapping 0.4s infinite linear;
+    background-color: transparent;
+}
+
+@keyframes vibrate {
+    0% {
+        transform: translate(0);
+    }
+
+    10% {
+        transform: translate(2px, -2px);
+    }
+
+    20% {
+        transform: translate(-2px, 2px);
+    }
+
+    30% {
+        transform: translate(2px, 2px);
+    }
+
+    40% {
+        transform: translate(-2px, -2px);
+    }
+
+    50% {
+        transform: translate(2px, 2px);
+    }
+
+    60% {
+        transform: translate(-2px, -2px);
+    }
+
+    70% {
+        transform: translate(2px, 2px);
+    }
+
+    80% {
+        transform: translate(-2px, 2px);
+    }
+
+    90% {
+        transform: translate(2px, -2px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes zapping {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(20deg);
+    }
+
+    50% {
+        transform: rotate(-20deg);
+    }
+
+    75% {
+        transform: rotate(20deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
