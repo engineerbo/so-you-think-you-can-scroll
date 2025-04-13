@@ -4,7 +4,7 @@
 
 ## Introduction
 
-[**Try the game here!**](https://realengineerbo.github.io/so-you-think-you-can-scroll/)
+[**Try the game here!**](https://engineerbo.github.io/so-you-think-you-can-scroll/)
 
 This is a simple game for you to prove your scrolling abilities (and devices).
 
