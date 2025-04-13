@@ -65,9 +65,7 @@ function updateTimeRemaining() {
   if (start_time_ms != undefined) {
     time_remaining_ms = TIMEOUT_MS - (getTimeMs() - start_time_ms);
   }
-  instructions2.innerHTML = `You have ${(time_remaining_ms / 1000).toFixed(
-    3
-  )} seconds`;
+  instructions2.innerHTML = `You have ${(time_remaining_ms / 1000).toFixed(3)} seconds`;
 }
 
 function showStart() {
@@ -146,9 +144,8 @@ function initialiseGame() {
           progress += time_elapsed_ms / 3;
         }
         reticle.style.opacity = 1;
-        reticle.style.transform = `translate(-50%, -50%) scale(${
-          (1 - progress / 120) / target_scale
-        })`;
+        reticle.style.transform = `translate(-50%, -50%) scale(${(1 - progress / 120) / target_scale
+          })`;
       } else {
         if (timer_id === undefined) {
           showStart();
@@ -202,9 +199,7 @@ function handleGameOver(score, total_distance) {
   let target = document.querySelector(".target");
   resetTarget(target);
 
-  let string = `You travelled ${Math.round(
-    total_distance
-  )}px and zapped ${score} ${score > 1 ? "mosquitoes" : "mosquito"}! `;
+  let string = `You travelled ${Math.round(total_distance)}px and zapped ${score} ${score > 1 ? "mosquitoes" : "mosquito"}! `;
 
   let instructions1 = document.querySelector("#instructions1");
 
