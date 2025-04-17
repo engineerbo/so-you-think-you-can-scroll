@@ -105,6 +105,22 @@ function showStart() {
 }
 
 function initialiseGame() {
+  const reducedAnimationInput = document.querySelector("#reduced-animation");
+  reducedAnimationInput.addEventListener("change", (event) => {
+    if (event.target.checked) {
+      document.documentElement.setAttribute("data-reduced-animation", "true");
+      localStorage.setItem("reduced-animation", "true");
+    } else {
+      document.documentElement.removeAttribute("data-reduced-animation");
+      localStorage.removeItem("reduced-animation");
+    }
+  });
+
+  if (localStorage.getItem("reduced-animation") === "true") {
+    reducedAnimationInput.checked = true;
+    document.documentElement.setAttribute("data-reduced-animation", "true");
+  }
+
   showStart();
 
   let target = document.createElement("div");
